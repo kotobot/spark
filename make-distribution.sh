@@ -187,9 +187,9 @@ cp "$SPARK_HOME"/assembly/target/scala*/*assembly*hadoop*.jar "$DISTDIR/lib/"
 # In this case, silence the error and ignore the return code of this command
 cp "$SPARK_HOME"/network/yarn/target/scala*/spark-*-yarn-shuffle.jar "$DISTDIR/lib/" &> /dev/null || :
 
-if [ "$SPARK_HIVE" == "1" ]; then
-  cp "$SPARK_HOME"/lib_managed/jars/datanucleus*.jar "$DISTDIR/lib/"
-fi
+#if [ "$SPARK_HIVE" == "1" ]; then
+#  cp "$SPARK_HOME"/lib_managed/jars/datanucleus*.jar "$DISTDIR/lib/"
+#fi
 
 # Copy license and ASF files
 cp "$SPARK_HOME/LICENSE" "$DISTDIR"
